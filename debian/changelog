@@ -1,0 +1,7 @@
+forgejo-runner (3.3.0) whatever; urgency=medium
+
+  * Support IPv6 with addresses from a private range and NAT for
+    docker:// with --enable-ipv6 and [container].enable_ipv6
+    lxc:// always
+
+ -- Kirill Shtrykov <kirill@shtrykov.com>  Fri, 01 Mar 2024 14:41:23 +0000

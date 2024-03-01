@@ -1,0 +1,16 @@
+# Forgejo Runner binary
+usr/bin/forgejo-runner
+
+# Generated package
+forgejo-runner/
+
+# Debhelper files
+.debhelper/
+
+# Debian package
+*.deb
+*.changes
+*.buildinfo
+
+# GPG keys
+*.gpg.key

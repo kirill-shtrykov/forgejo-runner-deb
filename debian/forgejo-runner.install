@@ -1,0 +1,2 @@
+usr/bin/forgejo-runner /usr/bin/
+etc/forgejo/runner/config.yaml /etc/forgejo/runner/

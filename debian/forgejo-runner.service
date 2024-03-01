@@ -1,0 +1,18 @@
+[Unit]
+Description="Forgejo Runner"
+Documentation=https://forgejo.org/docs/next/admin/actions/
+Requires=network-online.target
+After=network-online.target
+ConditionFileNotEmpty=/etc/forgejo/runner/config.yaml
+
+[Service]
+User=forgejo
+Group=forgejo
+WorkingDirectory=/opt/forgejo/runner
+ExecStart=/usr/bin/forgejo-runner --config=/etc/forgejo/runner/config.yaml daemon
+KillMode=process
+KillSignal=SIGTERM
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

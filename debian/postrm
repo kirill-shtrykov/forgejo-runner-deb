@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "$1" = "purge" ]
+then
+  userdel forgejo
+fi
+
+if [ "$1" == "upgrade" ] && [ -d /run/systemd/system ]; then
+  systemctl --system daemon-reload >/dev/null || true
+  systemctl restart forgejo-runner >/dev/null || true
+fi
+
+exit 0

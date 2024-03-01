@@ -1,0 +1,10 @@
+Source: forgejo-runner
+Section: default
+Priority: extra
+Maintainer: Kirill Shtrykov <kirill@shtrykov.com>
+Homepage: https://code.forgejo.org/forgejo/runner
+Vcs-Git: https://code.forgejo.org/forgejo/runner
+
+Package: forgejo-runner
+Architecture: amd64
+Description: A daemon that connects to a Forgejo instance and runs jobs for continous integration.

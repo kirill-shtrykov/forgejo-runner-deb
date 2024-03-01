@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mkdir -p /opt/forgejo/runner
+chown -R forgejo:forgejo /opt/forgejo/runner
+chown -R forgejo:forgejo /etc/forgejo/runner
+
+if [ -d /run/systemd/system ]; then
+    systemctl --system daemon-reload >/dev/null || true
+fi
